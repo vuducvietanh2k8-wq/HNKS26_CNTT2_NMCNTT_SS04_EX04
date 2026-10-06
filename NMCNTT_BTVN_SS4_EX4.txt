@@ -1,0 +1,22 @@
+Phần 1: Phân tích
+
+Mở Task Manager → Performance để kiểm tra CPU và RAM.
+Với 20 tab Chrome + VS Code, RAM 8GB dễ bị sử dụng gần 100%.
+Khi RAM đầy, Windows dùng Swap/Page File trên SSD để tạm lưu dữ liệu → tốc độ chậm hơn RAM rất nhiều → máy lag, đứng máy.
+CPU có thể tăng do Chrome và VS Code xử lý nhiều tác vụ, nhưng nguyên nhân chính trong tình huống này là thiếu RAM.
+
+So sánh:
+
+RAM = Bàn làm việc: nơi chương trình và dữ liệu đang được sử dụng trực tiếp. Bàn càng chật → làm việc càng chậm.
+SSD = Ngăn tủ: nơi lưu trữ dữ liệu lâu dài. Khi RAM hết chỗ, Windows phải lấy một phần dữ liệu đưa vào SSD → chậm hơn.
+Phần 2: Cây thư mục đề xuất
+
+Chuyển code sang ổ D: và sử dụng kebab-case:
+
+
+4 trụ cột:
+
+Phân vùng: lưu dự án ở D: thay vì thư mục hệ thống C:\Windows\System32.
+Cấu trúc: chia rõ src, data, docs, tests.
+Độ sâu: không tạo cây thư mục quá sâu, dễ tìm và quản lý.
+Naming Convention: dùng kebab-case như python-project, ptit-projects, test-main.py.
